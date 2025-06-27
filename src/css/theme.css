@@ -39,8 +39,7 @@ body:not([data-light]) [data-icon-moon] {
   transform: translate(-50%, -50%) rotate(-90deg) scale(0.5);
 }
 
-[data-theme-toggle]:hover svg,
-summary:hover svg {
+[data-theme-toggle]:hover svg {
   fill: #ff78b3;
 }
 
@@ -136,6 +135,31 @@ body[data-light] {
 
   .page-list-item-subtitle {
     color: #012423;
+  }
+
+  [data-scroll-button] {
+    background-color: rgba(236, 181, 213, 0.11);
+    filter: drop-shadow(0px 0px 8px rgb(255, 255, 255))
+      drop-shadow(0px 0px 12px rgb(255, 255, 255));
+    transform: translateY(100px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+
+  [data-scroll-icon] {
+    fill: #e12778;
+    transition: filter 0.3s ease;
+  }
+
+  [data-scroll-button][data-visible='true'] {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  [data-scroll-icon]:hover,
+  [data-scroll-icon]:focus {
+    filter: drop-shadow(0px 5px 15px rgb(189, 42, 133));
+    fill: #fff;
   }
 
   background: #a2e0af;

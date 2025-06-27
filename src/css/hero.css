@@ -9,6 +9,12 @@
   flex-direction: column;
 }
 
+.hero-promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hero-title {
   font-weight: 400;
   font-size: 36px;
@@ -129,10 +135,7 @@
 
   .hero-promo {
     width: 602px;
-    z-index: 2;
-    position: relative;
-    margin-right: -100px;
-    margin-left: 0;
+    align-items: flex-start;
   }
 
   .mob-hero-icon {

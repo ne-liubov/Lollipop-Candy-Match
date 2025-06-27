@@ -1,19 +1,66 @@
-<header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+<header class="header-section section" data-header>
+  <div class="header-container container">
+    <a href="./index.html" class="main-logo">
+      <img
+        src="/img/header/Logo.png"
+        class="logo-img"
+        alt="main-logo"
+        width="62"
+        height="62"
+      />
+    </a>
+
+    <nav class="header-nav">
+      <ul class="header-nav-list">
+        <li class="header-nav-item">
+          <a href="#about" data-nav-link>About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="header-nav-item">
+          <a href="#features" data-nav-link>Features</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#how-to-play" data-nav-link>How to Play</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#sweet-boosters" data-nav-link>Sweet Boosters</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#game-modes" data-nav-link>Game Modes</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#gallery" data-nav-link>Gallery</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#player-reviews" data-nav-link>Player Reviews</a>
+        </li>
+        <li class="header-nav-item"><a href="#faq" data-nav-link>FAQ</a></li>
+        <li class="header-nav-item">
+          <a href="#device-compatibility" data-nav-link>Device Compatibility</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#contact" data-nav-link>Contact</a>
         </li>
       </ul>
     </nav>
+
+    <div class="buttons">
+      <button type="button" data-menu-toggle>
+        <svg data-icon-burger>
+          <use href="/img/sprite.svg#icon-burger-menu"></use>
+        </svg>
+        <svg data-icon-close>
+          <use href="/img/sprite.svg#icon-Vector3"></use>
+        </svg>
+      </button>
+
+      <button type="button" class="theme-toggle-button" data-theme-toggle>
+        <svg class="icon-sun toggle-button-icon" data-icon-sun>
+          <use href="/img/sprite.svg#icon-sun"></use>
+        </svg>
+        <svg class="icon-moon toggle-button-icon" data-icon-moon>
+          <use href="/img/sprite.svg#icon-moon"></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </header>

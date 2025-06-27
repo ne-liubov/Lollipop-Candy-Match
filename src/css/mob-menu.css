@@ -1,0 +1,132 @@
+[data-backdrop-header] {
+  position: fixed;
+  top: 94px;
+  right: 0;
+  left: auto;
+  box-sizing: content-box;
+  background-color: #062f3d;
+  z-index: 1900;
+  transform: translateX(100%);
+  transition: transform 400ms ease-in-out;
+  padding: 8px 16px;
+}
+
+[data-backdrop-header][data-open='true'] {
+  transform: translateX(0);
+}
+
+[data-overlay] {
+  position: fixed;
+  top: 94px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(30px);
+  background: rgba(42, 42, 42, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+  z-index: 1500;
+}
+
+[data-overlay][data-visible='true'] {
+  opacity: 1;
+  visibility: visible;
+}
+
+body[data-menu-open='true'] {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.mobile-menu-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.mobile-menu-nav-list li a {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #f7f5f5;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-nav-list li a:hover {
+  color: #ff5ca3;
+}
+
+[data-menu-toggle] {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+[data-icon-burger] {
+  width: 28px;
+  height: 28px;
+  stroke: #fff;
+}
+
+[data-icon-close] {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
+
+[data-menu-toggle] svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transition: opacity 0.5s ease, transform 0.5s ease, fill 0.5s ease,
+    stroke 0.5s ease;
+}
+
+[data-icon-burger] {
+  opacity: 1;
+  z-index: 2;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+}
+
+[data-icon-close] {
+  opacity: 0;
+  z-index: 1;
+  transform: translate(-50%, -50%) rotate(-90deg) scale(0.5);
+}
+
+body[data-menu-open='true'] [data-icon-close] {
+  opacity: 1;
+  z-index: 2;
+  transform: translate(-50%, -50%) rotate(90deg) scale(1);
+}
+
+body[data-menu-open='true'] [data-icon-burger] {
+  opacity: 0;
+  z-index: 1;
+  transform: translate(-50%, -50%) rotate(90deg) scale(0.5);
+}
+
+[data-menu-toggle]:hover svg,
+[data-menu-close]:hover {
+  fill: #ff78b3;
+}
+
+[data-menu-toggle]:hover svg,
+[data-menu-burger]:hover {
+  stroke: #ff78b3;
+}
+
+@media (min-width: 1200px) {
+  [data-backdrop-header],
+  [data-menu-toggle] {
+    display: none;
+  }
+}

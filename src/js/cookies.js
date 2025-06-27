@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const COOKIE_CONSENT_KEY = 'cookie_status';
 
-  function showCookieBanner() {
+  const showCookieBanner = () => {
     cookieConsentBanner?.setAttribute('data-visible', 'true');
-  }
+  };
 
-  function hideCookieBanner() {
+  const hideCookieBanner = () => {
     cookieConsentBanner?.setAttribute('data-visible', 'false');
-  }
+  };
 
   const consentStatus = localStorage.getItem(COOKIE_CONSENT_KEY);
 

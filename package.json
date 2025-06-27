@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/STP-9449/",
+    "build": "vite build --base=/Lollipop-Candy-Match/",
     "preview": "vite preview",
     "build:preview": "vite build && vite preview"
   },

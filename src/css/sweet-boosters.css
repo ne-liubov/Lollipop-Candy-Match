@@ -108,9 +108,6 @@
 
   .sweet-boosters-icon {
     margin-top: 327px;
-    position: relative;
-    right: 0;
-    width: 152px;
-    height: 102px;
+    height: 100%;
   }
 }
